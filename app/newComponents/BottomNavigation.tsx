@@ -15,7 +15,7 @@ const navItems = [
   },
   {
     id: "reels",
-    label: "My Viral Reels",
+    label: "My Reels",
     icon: PlayCircleIcon,
     navigate: "/ReelSection",
   },
