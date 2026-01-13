@@ -58,7 +58,6 @@ const ProductCard = () => {
       whileTap={{ scale: 0.98 }}
       className="flex items-center gap-2 bg-card rounded-lg overflow-hidden border border-border/50 min-w-45 max-w-50 p-2 cursor-pointer"
     >
-      {/* Image - Left side */}
       <>
         <div className="overflow-hidden">
           <div className="flex gap-3">
@@ -67,7 +66,6 @@ const ProductCard = () => {
                 key={product.id}
                 className="min-w-65 bg-white rounded-xl shadow-md p-2 flex gap-3"
               >
-                {/* Image (Left) */}
                 <div className="relative h-16 w-16 shrink-0 rounded-lg overflow-hidden">
                   <img
                     src={product.image}
@@ -76,7 +74,6 @@ const ProductCard = () => {
                   />
                 </div>
 
-                {/* Content (Right) */}
                 <div className="flex flex-col justify-center">
                   <p className="text-sm font-medium text-gray-900 line-clamp-2">
                     {product.title}
@@ -86,7 +83,6 @@ const ProductCard = () => {
                     <span className="text-sm font-semibold text-black">
                       ₹{product.price}
                     </span>
-
                     {/* {product.originalPrice && (
                         <span className="text-xs line-through text-gray-400">
                           ₹{prod.originalPrice}

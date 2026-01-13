@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import HomeIcon from "@mui/icons-material/Home";
 import BookmarkIcon from "@mui/icons-material/Bookmark";
@@ -9,24 +10,26 @@ const navItems = [
   {
     id: "home",
     label: "Home",
-    icon: <HomeIcon sx={{ color: "#4c4b4b" }} />,
+    icon: HomeIcon,
     navigate: "/",
   },
   {
     id: "reels",
     label: "My Viral Reels",
-    icon: <PlayCircleIcon sx={{ color: "#4c4b4b" }} />,
+    icon: PlayCircleIcon,
     navigate: "/ReelSection",
   },
   {
     id: "wishlist",
     label: "Wishlist",
-    icon: <BookmarkIcon sx={{ color: "#4c4b4b" }} />,
+    icon: BookmarkIcon,
     navigate: "/bookmark",
   },
 ];
 
 export const BottomNavigation = () => {
+  const [active, setActive] = useState("");
+
   return (
     <div className="bottom-0 bg-white fixed right-0 left-0 z-50">
       <div className="flex justify-center h-14 space-x-16">
@@ -36,23 +39,18 @@ export const BottomNavigation = () => {
             className="inline-flex items-center justify-evenly relative cursor-pointer min-w-20 max-w-42 flex-col"
           >
             <Link
+              onClick={() => {
+                setActive(item.id);
+              }}
               href={item.navigate}
-              className={`${
-                "Home" === item.label
-                  ? "text-amber-600"
-                  : "text-[#4c4b4b] text-sm"
-              }`}
+              // className={`${
+              //   "Home" === item.label ? "text-amber-600" : "text-[#4c4b4b]"
+              // }`} 
+              className="text-[#4c4b4b]"
             >
-              {item.icon}
+              {<item.icon />}
             </Link>
-            <Link
-              href={item.navigate}
-              className="text-[#4c4b4b] text-sm"
-              // style={({ isActive }) => ({
-              //   color: isActive ? "#4c4b4b" : "#4c4b4b",
-              //   fontSize: isActive ? "14px" : "12px",
-              // })}
-            >
+            <Link href={item.navigate} className="text-[#4c4b4b] text-sm">
               {item.label}
             </Link>
           </div>

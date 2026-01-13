@@ -8,12 +8,12 @@ import { CollectionContent } from "./Content";
 
 function ContentBar() {
   const Tab = [
-    { id: 1, label: "Reel", path: "/ReelSection" },
-    { id: 2, label: "Post", path: "/PostSection" },
-    { id: 3, label: "Collection", path: "/CollectionSection" },
+    { id: 1, label: "Reels", path: "/ReelSection" },
+    { id: 2, label: "Posts", path: "/PostSection" },
+    { id: 3, label: "Collections", path: "/CollectionSection" },
   ];
 
-  const [activeTab, setActiveTab] = useState("Reel");
+  const [activeTab, setActiveTab] = useState("Reels");
 
   return (
     <div className="flex justify-center w-full">
@@ -37,9 +37,9 @@ function ContentBar() {
         </div>
 
         <div className="w-full">
-          {activeTab === "Reel" && <ReelContent />}
-          {activeTab === "Post" && <PostContent />}
-          {activeTab === "Collection" && <CollectionContent />}
+          {activeTab === "Reels" && <ReelContent />}
+          {activeTab === "Posts" && <PostContent />}
+          {activeTab === "Collections" && <CollectionContent />}
         </div>
       </div>
     </div>

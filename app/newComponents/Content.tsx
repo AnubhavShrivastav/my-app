@@ -77,10 +77,10 @@ export function CollectionContent() {
       <div className="grid grid-cols-2">
         {collection.map((item) => (
           <div className="relative">
-            <div className="absolute right-[3%] top-[3%] bg-black opacity-50 rounded-[5px] p-0.75">
-              <span className="font-medium text-white text-sm">
+            <div className="absolute right-[3%] top-[3%] bg-black opacity-50 rounded-[3px] px-0.75 py-px">
+              <span className="font-medium text-white text-[10px]">
                 X{" "}
-                <span className="font-medium text-white text-sm">
+                <span className="font-medium text-white text-[10px]">
                   {item.productsNum}
                 </span>
               </span>

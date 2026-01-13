@@ -95,7 +95,6 @@ export default function ReelProductScroller() {
                 />
               </div>
 
-              {/* Content (Right) */}
               <div className="flex flex-col justify-center">
                 <p className="text-sm font-medium text-gray-900 line-clamp-2">
                   {product.title}
